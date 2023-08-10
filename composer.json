@@ -1,0 +1,20 @@
+{
+  "name": "flametong/onlydigital",
+  "description": "OnlyDigital Test Assignment",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "flametong",
+      "email": "nikpul10@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*",
+    "ext-curl": "*"
+  }
+}
