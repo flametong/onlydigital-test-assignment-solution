@@ -12,6 +12,12 @@
 * Авторизация с использованием Yandex SmartCaptcha через почту или телефон
 * Страница для смены пользовательских данных
 
+## Установка зависимостей
+
+```shell
+composer install
+```
+
 ## Скриншоты приложения
 <div align="center">
   <img src="https://github.com/flametong/onlydigital-test-assignment-solution/assets/32167273/a1b15361-d669-4eb8-b37b-7c51838aeaa6" alt="Sign Up">
