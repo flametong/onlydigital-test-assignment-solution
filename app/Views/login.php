@@ -1,11 +1,14 @@
 <?php require 'parts/header.php' ?>
     <main>
         <h1>Login</h1>
-        <?php $message = $message ?? ""; ?>
+
+        <?php $message ??= ""; ?>
+
         <?= $message ?>
+        
         <form action="/login" method="post">
 
-            <?php $login = $login ?? ""; ?>
+            <?php $login ??= ""; ?>
 
             <p>
                 <label for="login">Login</label>
