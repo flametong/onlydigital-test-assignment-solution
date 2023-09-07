@@ -20,8 +20,8 @@ class User
     {
         $modes = [
             'login'  => "WHERE 
-                            email    = :login 
-                            OR phone = :login",
+                            email       = :login 
+                            OR phone    = :login",
             'signup' => "WHERE 
                             email       = :login 
                             OR phone    = :login
@@ -32,9 +32,9 @@ class User
 
         try {
             $stmt = $this->pdo->prepare(
-                "SELECT * 
-                       FROM Users 
-                       $whereCondition"
+                "SELECT *
+                 FROM Users
+                 $whereCondition"
             );
 
             $stmt->bindParam(':login', $login);
@@ -80,7 +80,7 @@ class User
         try {
             $stmt = $this->pdo->prepare(
                 "INSERT INTO users (username, email, phone, password) 
-                       VALUES (?, ?, ?, ?)"
+                 VALUES (?, ?, ?, ?)"
             );
 
             $stmt->execute([
@@ -112,11 +112,11 @@ class User
         try {
             $stmt = $this->pdo->prepare(
                 "UPDATE users 
-                       SET username = :username, 
-                           email    = :email,
-                           phone    = :phone
-                           $setPassword
-                       WHERE id = :id"
+                 SET username = :username, 
+                    email     = :email,
+                    phone     = :phone
+                    $setPassword
+                 WHERE id = :id"
             );
 
             $stmt->bindParam(':username', $username);
