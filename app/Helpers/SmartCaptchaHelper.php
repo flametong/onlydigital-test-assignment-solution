@@ -11,8 +11,8 @@ class SmartCaptchaHelper
 
         $args = http_build_query([
             "secret" => SMARTCAPTCHA_SERVER_KEY,
-            "token" => $token,
-            "ip" => $_SERVER['REMOTE_ADDR'],
+            "token"  => $token,
+            "ip"     => $_SERVER['REMOTE_ADDR'],
         ]);
 
         curl_setopt(
@@ -20,11 +20,13 @@ class SmartCaptchaHelper
             CURLOPT_URL,
             "https://smartcaptcha.yandexcloud.net/validate?$args"
         );
+
         curl_setopt(
             $ch,
             CURLOPT_RETURNTRANSFER,
             true
         );
+
         curl_setopt(
             $ch,
             CURLOPT_TIMEOUT,
@@ -32,7 +34,7 @@ class SmartCaptchaHelper
         );
 
         $server_output = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $httpCode      = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
 

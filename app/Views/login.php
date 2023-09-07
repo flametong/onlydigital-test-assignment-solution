@@ -31,7 +31,7 @@
             <div
                     id="captcha-container"
                     class="smart-captcha"
-                    data-sitekey="ysc1_tc5zXI9f5jvAxQWwboO4IaaQiuYnZfV1osqJDW3s6e4d3670"
+                    data-sitekey="ysc1_L9HtmsH0oTwvGiC7bqBkszhBUWoPJ26wNSku4xvubda79c64"
             >
                 <input
                         type="hidden"
